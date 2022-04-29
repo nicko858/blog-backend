@@ -22,14 +22,14 @@
     <!--================ Blog slider start =================-->
     <section>
       <div class="container">
-        <div class="d-flex">
-          {% for post in most_popular_posts %}
+        {% for post in most_popular_posts %}
+          <div class="d-flex">
             <div class="flex-fill" style="margin-right: 30px;">
               <div class="card blog__slide text-center">
                 {% if post.image_url %}
-                  <div class="blog__slide__img">
+                  <div class="blog__slide__img"> 
                     <img class="card-img rounded-0" src="{{ post.image_url }}" alt="">
-                  {% else %}
+                {% else %}
                     <img class="card-img rounded-0" src="{% static 'img/banner/blog.png' %}" alt="">
                   </div>
                 {% endif %}
@@ -39,8 +39,8 @@
                 </div>
               </div>
             </div>
-          {% endfor %}
-        </div>
+          </div>
+        {% endfor %}
       </div>
     </section>
     <!--================ Blog slider end =================-->
@@ -111,7 +111,6 @@
                 </div>
                 <button class="bbtns d-block mt-20 w-100">Subcribe</button>
               </div>
-
 
               <div class="single-sidebar-widget post-category-widget">
                 <h4 class="single-sidebar-widget" style="height:200px;">Здесь будет реклама</h4>
