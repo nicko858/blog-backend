@@ -60,25 +60,25 @@
             </div>
         
               <div class="comments-area">
-                  <h4>{{ post.comments|length}} Comments</h4>
-                  <div class="comment-list">
-                    {% for comment in  post.comments %}
-                      <div class="single-comment justify-content-between d-flex">
-                          <div class="user justify-content-between d-flex">
-                              <div class="desc">
-                                  <h5><a href="#">{{ comment.author }}</a></h5>
-                                  <p class="date">{{ comment.published_at }}</p>
-                                  <p class="comment">
-                                    {{ comment.text }}
-                                  </p>
-                              </div>
-                          </div>
-                          <div class="reply-btn">
-                                  <a href="" class="btn-reply text-uppercase">reply</a> 
-                          </div>
+                <h4>{{ post.comments|length}} Comments</h4>
+                <div class="comment-list">
+                  {% for comment in  post.comments %}
+                    <div class="single-comment justify-content-between d-flex">
+                      <div class="user justify-content-between d-flex">
+                        <div class="desc">
+                          <h5><a href="#">{{ comment.author }}</a></h5>
+                          <p class="date">{{ comment.published_at }}</p>
+                          <p class="comment">
+                            {{ comment.text }}
+                          </p>
+                        </div>
                       </div>
-                    {% endfor %}
-                  </div>	                                    				
+                        <div class="reply-btn">
+                          <a href="" class="btn-reply text-uppercase">reply</a> 
+                        </div>
+                    </div>
+                  {% endfor %}
+                </div>	                                    				
               </div>
         </div>
           <!-- Start Blog Post Siddebar -->
@@ -95,10 +95,9 @@
                 <button class="bbtns d-block mt-20 w-100">Subcribe</button>
               </div>
 
-
-                <div class="single-sidebar-widget post-category-widget">
-                  <h4 class="single-sidebar-widget" style="height:200px;">Здесь будет реклама</h4>
-                </div>
+              <div class="single-sidebar-widget post-category-widget">
+                <h4 class="single-sidebar-widget" style="height:200px;">Здесь будет реклама</h4>
+              </div>
             </div>
           </div>
           <!-- End Blog Post Siddebar -->
